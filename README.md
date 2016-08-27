@@ -14,10 +14,6 @@ Questo programma è rappresentato da una semplice pagina web che permette di vis
 
 Live demo disponibile tramite [cdn.rawgit.com](https://cdn.rawgit.com/auino/italian-television/master/index.html).
 
-###Utilizzo
-
-TODO
-
 ###Protezione dei contenuti
 
 [Alcuni suggerimenti](https://github.com/auino/rai.tv-media-downloader#lexploit-e-come-migliorare-la-piattaforma-rai) da seguire per proteggere i contenuti forniti (con esempio del sito [rai.tv](http://www.rai.tv)).
