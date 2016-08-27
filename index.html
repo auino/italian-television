@@ -9,7 +9,7 @@
 <script src="data.js"></script>
 <script>
 <!--
-var arechannelsshown = false;
+var shownnetwork = null;
 $(document).ready(function() {
 	var s = '<ul>';
 	for(var k in data) {
@@ -19,19 +19,18 @@ $(document).ready(function() {
 	$('#networks').html(s);
 });
 function showchannels(n) { // n (key) stands for network
-	if(arechannelsshown) $('#channels').slideUp(function() { shownewchannels(n); });
-	else shownewchannels(n);
-}
-function shownewchannels(n) { // n (key) stands for network
-	$('#video').html('');
-	var s = '<ul>';
-	for(var k in data[n]['channels']) {
-		var c = data[n]['channels'][k];
-		s+='<li class="channel"><a href="" onclick="showchannel(\''+n+'\', \''+k+'\'); return false;"><img class="channel" title="'+c['name']+'" alt="'+c['name']+'" src="'+c['img']+'"/></li>';
-	}
-	$('#channels').html(s);
-	$('#channels').slideDown();
-	arechannelsshown = true;
+	$('#channels').slideUp(function() {
+		$('#video').html('');
+		if(shownnetwork==n) { shownnetwork = null; return; }
+		var s = '<ul>';
+		for(var k in data[n]['channels']) {
+			var c = data[n]['channels'][k];
+			s+='<li class="channel"><a href="" onclick="showchannel(\''+n+'\', \''+k+'\'); return false;"><img class="channel" title="'+c['name']+'" alt="'+c['name']+'" src="'+c['img']+'"/></li>';
+		}
+		$('#channels').html(s);
+		$('#channels').slideDown();
+		shownnetwork = n;
+	});
 }
 function showchannel(n, c) { // n and c (keys) stand for network and channel
 	var channel = data[n]['channels'][c];
