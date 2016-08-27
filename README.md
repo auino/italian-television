@@ -1,4 +1,4 @@
-# italian-television
+# Italian-television
 
 This software is intended to be mainly used from Italian persons.
 This document is therefore written in Italian language.
@@ -7,6 +7,10 @@ Nevertheless, code and included comments are in English language.
 ###Descrizione
 
 Questo programma è rappresentato da una semplice pagina web che permette di visualizzare in live streaming i contenuti delle principali televisioni italiane.
+
+###Demo
+
+Live demo available by clicking on [this link](https://cdn.rawgit.com/auino/italian-television/master/index.html).
 
 ###Utilizzo
 
