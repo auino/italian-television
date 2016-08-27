@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Italian Television</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Italian television in live streaming">
+<link rel="shortcut icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="data.js"></script>
+<script>
+<!--
+var arechannelsshown = false;
+$(document).ready(function() {
+	var s = '<ul>';
+	for(var k in data) {
+		s+='<li class="network"><a href="" onclick="showchannels(\''+k+'\'); return false;" target="_new"><img class="network" title="'+data[k]['name']+'" alt="'+data[k]['name']+'" src="'+data[k]['img']+'"/></a></li>';
+	}
+	s+='</ul>';
+	$('#networks').html(s);
+});
+function showchannels(n) { // n (key) stands for network
+	if(arechannelsshown) $('#channels').slideUp(function() { shownewchannels(n); });
+	else shownewchannels(n);
+}
+function shownewchannels(n) { // n (key) stands for network
+	$('#video').html('');
+	var s = '<ul>';
+	for(var k in data[n]['channels']) {
+		var c = data[n]['channels'][k];
+		s+='<li class="channel"><a href="" onclick="showchannel(\''+n+'\', \''+k+'\'); return false;"><img class="channel" title="'+c['name']+'" alt="'+c['name']+'" src="'+c['img']+'"/></li>';
+	}
+	$('#channels').html(s);
+	$('#channels').slideDown();
+	arechannelsshown = true;
+}
+function showchannel(n, c) { // n and c (keys) stand for network and channel
+	var channel = data[n]['channels'][c];
+	//var s = '<video src="'+channel['video']+'" controls="" autoplay=""><source src="file:///Users/auino/BTSync/Personal/Various/development/GitHub/italian-television/feeds/rai_rai1.m3u8" type="audio/mpegurl"></video>';
+	var s = '<video controls="" autoplay=""><source src="'+channel['video']+'" type="application/x-mpegURL"></video>';
+	$('#video').html(s);
+}
+-->
+</script>
+<style>
+body { padding:2em; }
+img.network, img.channel { margin:0.5em; }
+img.network { height:2.7em; }
+img.channel { max-height:2.3em; }
+div#networks, div#channels { padding:0.3em; }
+div#channels { background:#808080; display:none; }
+li.network, li.channel { display:inline; padding:0.3em; vertical-align:middle; }
+div#video { margin:1em; }
+video { width:90%; max-width:640px; max-height:480px; }
+</style>
+</head>
+<body style="text-align:center;background:#000;">
+<div id="networks"></div>
+<div id="channels"></div>
+<div id="video"></div>
+</body>
+</html>
