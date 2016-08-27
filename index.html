@@ -53,6 +53,9 @@ div#video { margin:1em; max-height:480px; }
 video { height:320px; max-width:90%; }
 #credits { position:absolute; bottom:0.5em; right:0.5em; }
 #credits > a { font-size:0.6em; color:#808080; text-decoration:none; }
+@media screen {
+	#credits { display:none; }
+}
 @media screen and (orientation:portrait) {
 	li.network, li.channel { display:block; }
 }
