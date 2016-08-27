@@ -12,7 +12,7 @@ Questo programma è rappresentato da una semplice pagina web che permette di vis
 
 ###Demo
 
-Live demo disponibile tramite [cdn.rawgit.com](https://cdn.rawgit.com/auino/italian-television/master/index.html).
+Live demo disponibile tramite [rawgit.com](https://rawgit.com/auino/italian-television/master/index.html).
 
 ###Protezione dei contenuti
 
