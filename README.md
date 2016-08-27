@@ -18,7 +18,7 @@ TODO
 
 ###Protezione dei contenuti
 
-[Alcuni suggerimenti](https://github.com/auino/rai.tv-media-downloader#lexploit-e-come-migliorare-la-piattaforma-rai) da seguire per proteggere i contenuti forniti.
+[Alcuni suggerimenti](https://github.com/auino/rai.tv-media-downloader#lexploit-e-come-migliorare-la-piattaforma-rai) da seguire per proteggere i contenuti forniti (con esempio del sito [rai.tv](http://www.rai.tv)).
 
 ###Disclaimer
 
