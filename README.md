@@ -4,7 +4,7 @@ This software is intended to be mainly used from Italian persons.
 This document is therefore written in Italian language.
 Nevertheless, code and included comments are in English language.
 
-https://github.com/auino/italian-television
+Main URL: https://github.com/auino/italian-television
 
 ###Descrizione
 
