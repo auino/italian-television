@@ -6,7 +6,7 @@
 <link rel="shortcut icon" href="img/icon.png">
 <link rel="apple-touch-icon" href="img/icon.png">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="data.js"></script>
+<script src="https://rawgit.com/auino/italian-television/master/data.js"></script>
 <script>
 <!--
 var shownnetwork = null;
@@ -26,6 +26,8 @@ function showchannels(n) { // n (key) stands for network
 		var s = '<ul>';
 		for(var k in data[n]['channels']) {
 			var c = data[n]['channels'][k];
+			console.log(c);
+			if(c['enabled']=='false') continue;
 			s+='<li class="channel"><a href="" onclick="showchannel(\''+n+'\', \''+k+'\'); return false;"><img class="channel" title="'+c['name']+'" alt="'+c['name']+'" src="'+c['img']+'"/></li>';
 		}
 		$('#channels').html(s);
@@ -35,7 +37,6 @@ function showchannels(n) { // n (key) stands for network
 }
 function showchannel(n, c) { // n and c (keys) stand for network and channel
 	var channel = data[n]['channels'][c];
-	//var s = '<video src="'+channel['video']+'" controls="" autoplay=""><source src="file:///Users/auino/BTSync/Personal/Various/development/GitHub/italian-television/feeds/rai_rai1.m3u8" type="audio/mpegurl"></video>';
 	var s = '<video controls="" autoplay=""><source src="'+channel['video']+'" type="application/x-mpegURL"></video>';
 	$('#video').html(s);
 	$("html, body").animate({ scrollTop: $(document).height() }, "slow");
